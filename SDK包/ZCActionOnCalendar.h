@@ -1,7 +1,12 @@
-ZCActionOnCalendar
-==================
-
-添加事件到日历以及提醒事项
+//
+//  ZCActionOnCalendar.h
+//  事件加入到日历
+//
+//  Created by ZhangCheng on 14-4-26.
+//  Copyright (c) 2014年 张诚. All rights reserved.
+//
+//添加事件到日历以及提醒事项
+//使用日历需要添加EvenKit库
 // 版本说明 iOS研究院 305044955
 /*
 1.0版本示例
@@ -19,3 +24,9 @@ ZCActionOnCalendar
  //注意 在参数第十八行需要设置不同的参数，然后进行判断是事件提醒还是日历事件
  //EKEntityMaskEvent提醒事项参数（该参数只能真机使用）  EKEntityTypeEvent日历时间提醒参数
 
+ */
+#import <Foundation/Foundation.h>
+
+@interface ZCActionOnCalendar : NSObject
++ (void)saveEventStartDate:(NSDate*)startData endDate:(NSDate*)endDate alarm:(float)alarm eventTitle:(NSString*)eventTitle location:(NSString*)location isReminder:(BOOL)isReminder;
+@end
